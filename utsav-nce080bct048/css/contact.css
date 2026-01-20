@@ -1,0 +1,112 @@
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: var(--font-body);
+  border: 1px solid #b0b0b045;
+  border-radius: var(--border-radius);
+  background-color: #ffffff;
+  color: var(--color-text-main);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: rgba(14, 63, 126, 0.12) 0px 0px 0px 3px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: var(--font-body);
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+}
+
+.form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(14, 63, 126, 0.08) 0px 6px 18px -6px,
+    rgba(42, 51, 70, 0.06) 0px 12px 36px -12px;
+}
+
+.form-submit:active {
+  transform: translateY(0px);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .form-submit {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-input,
+  .form-textarea {
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .form-submit {
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
