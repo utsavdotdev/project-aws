@@ -22,7 +22,7 @@ jobs:
 
       - name: Upload files to S3
         run: |
-           aws s3 sync utsav-048/ s3://${{ secrets.S3_BUCKET }}/utsav-048/ \
+           aws s3 sync utsav-nce080bct048 s3://${{ secrets.S3_BUCKET }}/utsav-048/ \
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*"
